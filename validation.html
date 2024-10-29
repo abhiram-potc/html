@@ -82,7 +82,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th>E-email ID</th>
+                    <th>E-mail ID</th>
                     <td>
                         <input type="email" name="email">
                     </td>
@@ -163,7 +163,7 @@
                 var re = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
                 var ren = /[0-9!@#$%^&*]/
                 var ph = /^[0-9]+$/;
-                var ad = /[!@#$%^&*]/;
+                var ad = /^[0-9a-zA-Z\s,.#-]+$/
                 var qw = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (name == "") 
                 {
@@ -183,22 +183,16 @@
                     document.form.pass.focus();
                     return false;
                 }
-                if (re.test(pass))
+                if (!re.test(pass))
                 {
                     alert("Enter minimum 8 digit Password !!" + '\n' + "Atleast one Lowercase & uppercase & digti & special charecter must be included");
                     document.form.pass.focus();
                     return false;
                 }
-                if (re_pass=='')
+                if (re_pass=='' || (!re.test(re_pass)))
                 {
-                    alert("Enter minimum 8 digit Password !!" + '\n' + "Atleast one Lowercase & uppercase & digti & special charecter must be included");
+                    alert("Confirm your password");
                     document.form.re_pass.focus();
-                    return false;
-                }
-                if (re.test(re_pass))
-                {
-                    alert("Enter minimum 8 digit Password !!" + '\n' + "Atleast one Lowercase & uppercase & digti & special charecter must be included");
-                    form.re_pass.focus();
                     return false;
                 }
                 if (pass!=re_pass)
@@ -213,7 +207,7 @@
                     document.form.email.focus();
                     return false;
                 }
-                if (qw.test(email))
+                if (!qw.test(email))
                 {
                     alert("Please enter valid email id");
                     document.form.email.focus();
@@ -225,7 +219,7 @@
                     document.form.home.focus();
                     return false;
                 }
-                if (ph.test(home))
+                if (!ph.test(home))
                 {
                     alert("Please enter valid number");
                     document.form.home.focus();
@@ -237,7 +231,7 @@
                     document.form.office.focus();
                     return false;
                 }
-                if (ph.test(office))
+                if (!ph.test(office))
                 {
                     alert("Please enter valid number");
                     document.form.office.focus();
@@ -255,7 +249,7 @@
                     document.form.permanent.focus();
                     return false;
                 }
-                if (ad.test(permanent))
+                if (!ad.test(permanent))
                 {
                     alert("Please enter valid address");
                     document.form.permanent.focus();
@@ -267,7 +261,7 @@
                     document.form.residence.focus();
                     return false;
                 }
-                if (ad.test(residence))
+                if (!ad.test(residence))
                 {
                     alert("Please enter valid address");
                     document.form.residence.focus();
