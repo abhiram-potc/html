@@ -45,7 +45,7 @@
                 <tr>
                     <th>Password</th>
                     <td>
-                        <input type="password" name="pass">
+                        <input type="password" name="pass" id="pass">
                         <br>
                         <i id="msg2"></i>
                     </td>
@@ -53,7 +53,8 @@
                 <tr>
                     <th>Re-password</th>
                     <td>
-                        <input type="password" name="re_pass">
+                        <input type="password" name="re_pass" id="re_pass">
+                        &nbsp;&nbsp;<input type="checkbox" onclick="viewpass()">Show Password
                         <br>
                         <i id="msg3"></i>
                     </td>
@@ -286,6 +287,21 @@
                     document.getElementById("msg8").innerHTML="Please enter valid address";
                     document.form.residence.focus();
                     return false;
+                }
+            }
+            function viewpass()
+            {
+                var p = document.getElementById("pass");
+                var rp = document.getElementById("re_pass");
+                if ((p.type === "password") || (rp.type === "password"))
+                {
+                    p.type = "text";
+                    rp.type = "text";
+                }
+                else
+                {
+                    p.type="password";
+                    rp.type="password";
                 }
             }
         </script>
