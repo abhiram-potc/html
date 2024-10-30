@@ -1,0 +1,14 @@
+table {
+    align-self: center;
+}
+th, td {
+    padding:12px;
+    text-align: center;
+}
+tr:hover {
+    background-color: grey;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
