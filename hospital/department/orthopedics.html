@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orthopedics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .container {
+            display: flex; /* Use flexbox for layout */
+            align-items: flex-start; /* Align items at the start */
+        }
+
+        .image-container {
+            flex: 1; /* Allow the image container to take up space */
+            margin-right: 20px; /* Space between image and content */
+        }
+
+        .content-container {
+            flex: 2; /* Allow the content container to take up more space */
+        }
+
+        .more-content {
+            display: none; /* Initially hide the additional content */
+            margin-top: 10px;
+        }
+
+        .see-more {
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        p {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Orthopedics</h1>
+    <div class="container">
+        <div class="image-container">
+            <img src="../image/orthopedics.png" id="image" alt="Neurology Image" class="responsive-image" style="width: 100%; max-width: 400px;"> <!-- Adjust width as needed -->
+        </div>
+        <div class="content-container">
+            <p>Orthopedics, also known as orthopedic surgery, is a branch of medicine that focuses on the care of the skeletal system and its interconnecting parts.</p>
+
+            <div class="more-content" id="moreContent">
+                <p>
+                    Orthopedics, also known as orthopedic surgery, is a branch of medicine that focuses on the care of the skeletal system and its interconnecting parts.
+                    These parts include the following:
+                    <ul>
+                        <li>bones</li>
+                        <li>muscles</li>
+                        <li>joints</li>
+                        <li>tendons</li>
+                        <li>ligaments</li>
+                        <li>nerves</li>
+                    </ul>
+                    There are generally two types of orthopedists: surgical and nonsurgical. The former are called orthopedic surgeons,
+                    while nonsurgical orthopedists include physiatrists and physical medicine and rehabilitation specialists.<br><br>
+                    An orthopedist often works as part of a larger orthopedic treatment team. This team may include:
+                    <ul>
+                        <li>physician assistants</li>
+                        <li>nurse practitioners</li>
+                        <li>occupational and physical therapists</li>
+                        <li>athletic trainers</li>
+                    </ul>
+                    <h2>What do orthopedists treat?</h2>
+                    <br><br>
+                    Orthopedists treat a wide variety of musculoskeletal conditions. These conditions may be present from birth, or they may result from an injury or age-related wear and tear.<br>
+                    Below are some of the most common conditions that an orthopedist may treat:
+                    <ul>
+                        <li>joint pain from arthritis</li>
+                        <li>bone fractures</li>
+                        <li>soft tissue injuries, which are those that affect muscles, tendons, and ligaments</li>
+                        <li>back pain</li>
+                        <li>neck pain</li>
+                        <li>shoulder pain and problems, such as bursitis</li>
+                        <li>carpal tunnel syndrome</li>
+                        <li>overuse and sports injuries, including sprains, tendinitis, meniscus tears, and anterior cruciate ligament (ACL) tears</li>
+                        <li>congenital conditions, such as clubfoot and scoliosis</li>
+                        <li>bone cancer</ul>
+                </p>
+            </div>
+            
+            <span class="see-more" id="seeMoreBtn">See More</span>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('seeMoreBtn').onclick = function() {
+            var moreContent = document.getElementById('moreContent');
+            if (moreContent.style.display === 'none' || moreContent.style.display === '') {
+                moreContent.style.display = 'block'; // Show the additional content
+                this.innerText = 'See Less'; // Change button text
+            } else {
+                moreContent.style.display = 'none'; // Hide the additional content
+                this.innerText = 'See More'; // Change button text back
+            }
+        };
+    </script>
+</body>
+</html>
