@@ -1,0 +1,54 @@
+<html>
+    <header>
+
+    </header>
+    <head>
+        <title>Login</title>
+        <style>
+            table {
+                opacity: 100;
+                
+            }
+            th {
+                text-align: left;
+            }
+            #bimg {
+            background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("image/hospital.jpg");
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bimg">
+            <form method="post" action="login.php" name="login">
+                <table cellpadding="4" cellspacing="5" align="center">
+                    <caption><h2>Login</h2></caption>
+                    <tr>
+                        <th>E-mail/Phone Number</th>
+                        <td>
+                            <input type="text" name="credit" id="credit">
+                        </td>
+                    </tr>
+                    <tr>
+                            <th>Password</th>
+                        <td>
+                            <input type="password" id="password" name="password">
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>
+                            <input type="reset" name="Reset">
+                        </td>
+                        <td>
+                            <input type="submit" name="login" value="Sign In">
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td colspan="2">
+                            Don't have an account? <a href="reg.html">Sign-Up</a>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
